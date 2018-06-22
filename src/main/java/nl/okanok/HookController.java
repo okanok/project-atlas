@@ -1,6 +1,7 @@
 package nl.okanok;
 
 import nl.okanok.controllerImpl.GitHubHookController;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,23 +28,23 @@ public class HookController implements GitHookController{
 	 * Endpoint for handling the create branch event.
 	 */
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
-	public void createBranchHookHandler() {
-		hookController.createBranchHookHandler();
+	public void createBranchHookHandler(@RequestBody String payload) {
+		hookController.createBranchHookHandler(payload);
 	}
 
 	/**
 	 * Endpoint for handling the merge branch event.
 	 */
 	@RequestMapping(value = "/merge", method = RequestMethod.POST)
-	public void mergeBranchHookHandler() {
-		hookController.mergeBranchHookHandler();
+	public void mergeBranchHookHandler(@RequestBody String payload) {
+		hookController.mergeBranchHookHandler(payload);
 	}
 
 	/**
 	 * Endpoint for handling the push event.
 	 */
 	@RequestMapping(value = "/push", method = RequestMethod.POST)
-	public void pushChangesHookHandler() {
-		hookController.pushChangesHookHandler();
+	public void pushChangesHookHandler(@RequestBody String payload) {
+		hookController.pushChangesHookHandler(payload);
 	}
 }

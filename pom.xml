@@ -20,16 +20,15 @@
             <artifactId>jackson-databind</artifactId>
             <version>${jackson.version}</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>javax.xml.bind</groupId>-->
-            <!--<artifactId>jaxb-api</artifactId>-->
-            <!--<version>${jaxb-api.version}</version>-->
-            <!--<scope>runtime</scope>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${gson.version}</version>
+        </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
+            <version>${javax-servlet.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -57,6 +56,7 @@
     <properties>
         <spring.version>4.1.5.RELEASE</spring.version>
         <jackson.version>2.4.0</jackson.version>
-        <jaxb-api.version>2.2.11</jaxb-api.version>
+        <javax-servlet.version>3.1.0</javax-servlet.version>
+        <gson.version>2.2.4</gson.version>
     </properties>
 </project>
