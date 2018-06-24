@@ -21,6 +21,16 @@
             <version>${jackson.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf</artifactId>
+            <version>${thymeleaf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf-spring4</artifactId>
+            <version>${thymeleaf.version}</version>
+        </dependency>
+        <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>${gson.version}</version>
@@ -58,5 +68,6 @@
         <jackson.version>2.4.0</jackson.version>
         <javax-servlet.version>3.1.0</javax-servlet.version>
         <gson.version>2.2.4</gson.version>
+        <thymeleaf.version>2.1.4.RELEASE</thymeleaf.version>
     </properties>
 </project>
