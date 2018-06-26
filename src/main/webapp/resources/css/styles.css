@@ -1,0 +1,27 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+.inner-content {
+    margin: 0 0 30px;
+    /* bottom = footer height */
+    padding: 0 25px 25px 25px;
+}
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.footer {
+    color: gray;
+    font-style: italic;
+    font-family: "Arial";
+}
+
+.form-container {
+    margin-bottom: 5px;
+}

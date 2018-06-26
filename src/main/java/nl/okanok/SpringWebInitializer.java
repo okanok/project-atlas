@@ -12,7 +12,7 @@ public class SpringWebInitializer extends
 
 	@Override
 	protected String[] getServletMappings() {
-		return new String[] {"/", "/hook/version", "/hook/create", "/hook/merge", "/hook/push"};
+		return new String[] {"/", "/hook/version", "/hook/create", "/hook/merge", "/hook/push", "/settings/postAll"};
 	}
 
 	@Override

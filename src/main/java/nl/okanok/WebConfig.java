@@ -6,6 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
@@ -15,6 +16,11 @@ import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 @EnableWebMvc
 @ComponentScan(basePackages = "nl.okanok")
 public class WebConfig extends WebMvcConfigurerAdapter {
+
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry){
+		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+	}
 
 	@Bean(name ="templateResolver")
 	public ServletContextTemplateResolver getTemplateResolver() {
@@ -43,7 +49,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	@Bean(name ="messageSource")
 	public MessageSource getMessageSource() {
 		ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
-		messageSource.setBasename("/WEB-INF/properties/props");
+		messageSource.setBasename("/WEB-INF/properties/webapp-props");
 		messageSource.setDefaultEncoding("UTF-8");
 		return messageSource;
 	}
